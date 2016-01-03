@@ -23,7 +23,7 @@
 			<key>Settings</key>
 			<dict>
 				<key>Position</key>
-				<string>4</string>
+				<integer>4</integer>
 				<key>CategoryFirst</key>
 				<string>자동요리 구이</string>
 				<key>CategorySecond</key>
@@ -57,7 +57,7 @@
 			<key>Settings</key>
 			<dict>
 				<key>Position</key>
-				<string>4</string>
+				<integer>4</integer>
 				<key>CategoryFirst</key>
 				<string>자동요리 구이</string>
 				<key>CategorySecond</key>
@@ -94,7 +94,7 @@
 			<key>Settings</key>
 			<dict>
 				<key>Position</key>
-				<string>4</string>
+				<integer>4</integer>
 				<key>CategoryFirst</key>
 				<string>자동요리 구이</string>
 				<key>CategorySecond</key>
@@ -125,7 +125,7 @@
 			<key>Settings</key>
 			<dict>
 				<key>Position</key>
-				<string>4</string>
+				<integer>4</integer>
 				<key>CategoryFirst</key>
 				<string>자동요리 구이</string>
 				<key>CategorySecond</key>
@@ -161,7 +161,7 @@
 			<key>Settings</key>
 			<dict>
 				<key>Position</key>
-				<string>4</string>
+				<integer>4</integer>
 				<key>CategoryFirst</key>
 				<string>자동요리 구이</string>
 				<key>CategorySecond</key>

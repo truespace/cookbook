@@ -70,7 +70,7 @@
                                         <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_0037" translatesAutoresizingMaskIntoConstraints="NO" id="NIx-dh-PRp">
                                             <rect key="frame" x="8" y="8" width="64" height="64"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jl7-t4-vS8">
+                                        <imageView userInteractionEnabled="NO" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pos1" translatesAutoresizingMaskIntoConstraints="NO" id="jl7-t4-vS8">
                                             <rect key="frame" x="80" y="46" width="45" height="45"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" tag="30" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6N8-As-S6g">
@@ -81,6 +81,9 @@
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" tag="50" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bmw-R3-TMY">
                                             <rect key="frame" x="221" y="46" width="45" height="45"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" tag="60" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2e-xl-3jW">
+                                            <rect key="frame" x="268" y="46" width="45" height="45"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -145,5 +148,6 @@
     <resources>
         <image name="IMG_0037" width="100" height="100"/>
         <image name="first" width="30" height="30"/>
+        <image name="pos1" width="100" height="100"/>
     </resources>
 </document>

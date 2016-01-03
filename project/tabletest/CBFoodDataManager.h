@@ -23,6 +23,8 @@ typedef enum {
 - (NSInteger)sectionsCount;
 
 - (NSArray *)arrayOfAutoFoods;
+- (NSDictionary *)autoFoodDataAtIndex:(NSInteger)index;
+
 - (NSArray *)arrayOfManualFoods;
 
 @end

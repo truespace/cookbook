@@ -19,6 +19,10 @@
 		67711BC91C3907130096ECD0 /* IMG_0037.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 67711BC71C3907130096ECD0 /* IMG_0037.JPG */; };
 		67711BCA1C3907130096ECD0 /* IMG_0037@2x.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 67711BC81C3907130096ECD0 /* IMG_0037@2x.JPG */; };
 		E5C69A431C391D740014EC24 /* CBFoodDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C69A421C391D740014EC24 /* CBFoodDataManager.m */; };
+		E5C69A4E1C392F740014EC24 /* pos1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C69A4A1C392F740014EC24 /* pos1.png */; };
+		E5C69A4F1C392F740014EC24 /* pos2.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C69A4B1C392F740014EC24 /* pos2.png */; };
+		E5C69A541C392FE60014EC24 /* pos3.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C69A521C392FE60014EC24 /* pos3.png */; };
+		E5C69A551C392FE60014EC24 /* pos4.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C69A531C392FE60014EC24 /* pos4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,11 @@
 		67711BC81C3907130096ECD0 /* IMG_0037@2x.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IMG_0037@2x.JPG"; sourceTree = "<group>"; };
 		E5C69A411C391D740014EC24 /* CBFoodDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFoodDataManager.h; sourceTree = "<group>"; };
 		E5C69A421C391D740014EC24 /* CBFoodDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFoodDataManager.m; sourceTree = "<group>"; };
+		E5C69A4A1C392F740014EC24 /* pos1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pos1.png; sourceTree = "<group>"; };
+		E5C69A4B1C392F740014EC24 /* pos2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pos2.png; sourceTree = "<group>"; };
+		E5C69A521C392FE60014EC24 /* pos3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pos3.png; sourceTree = "<group>"; };
+		E5C69A531C392FE60014EC24 /* pos4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pos4.png; sourceTree = "<group>"; };
+		E5C69A561C39302C0014EC24 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +106,10 @@
 		67711BC01C3902250096ECD0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E5C69A4A1C392F740014EC24 /* pos1.png */,
+				E5C69A4B1C392F740014EC24 /* pos2.png */,
+				E5C69A521C392FE60014EC24 /* pos3.png */,
+				E5C69A531C392FE60014EC24 /* pos4.png */,
 				67711BC51C3906E20096ECD0 /* foods.plist */,
 				67711BB51C38F8DA0096ECD0 /* Assets.xcassets */,
 				67711BC71C3907130096ECD0 /* IMG_0037.JPG */,
@@ -111,6 +124,7 @@
 		67711BC11C3902380096ECD0 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
+				E5C69A561C39302C0014EC24 /* common.h */,
 				67711BC21C3904500096ECD0 /* CBFoodListTableViewController.h */,
 				67711BC31C3904500096ECD0 /* CBFoodListTableViewController.m */,
 				E5C69A411C391D740014EC24 /* CBFoodDataManager.h */,
@@ -178,11 +192,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				67711BCA1C3907130096ECD0 /* IMG_0037@2x.JPG in Resources */,
+				E5C69A551C392FE60014EC24 /* pos4.png in Resources */,
+				E5C69A4E1C392F740014EC24 /* pos1.png in Resources */,
+				E5C69A541C392FE60014EC24 /* pos3.png in Resources */,
 				67711BC61C3906E20096ECD0 /* foods.plist in Resources */,
 				67711BB91C38F8DA0096ECD0 /* LaunchScreen.storyboard in Resources */,
 				67711BB61C38F8DA0096ECD0 /* Assets.xcassets in Resources */,
 				67711BC91C3907130096ECD0 /* IMG_0037.JPG in Resources */,
 				67711BB41C38F8DA0096ECD0 /* Main.storyboard in Resources */,
+				E5C69A4F1C392F740014EC24 /* pos2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

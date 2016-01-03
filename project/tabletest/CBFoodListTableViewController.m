@@ -8,6 +8,7 @@
 
 #import "CBFoodListTableViewController.h"
 #import "CBFoodDataManager.h"
+#import "common.h"
 
 @interface CBFoodListTableViewController ()
 
@@ -58,25 +59,45 @@
     // Configure the cell...
     NSArray* arrayOfAuto = [_foodDataManager arrayOfAutoFoods];
     NSArray* arrayOfManual = [_foodDataManager arrayOfManualFoods];
-    if (indexPath.section == eFoodAutoCook) {
-        for (UIView* view in cell.contentView.subviews) {
-            if (view.tag == 0) {
-                UILabel* labelTitle = (UILabel *)[view viewWithTag:0];
-                NSString* titleString = [[arrayOfAuto objectAtIndex:indexPath.row] objectForKey:@"Name"];
-                [labelTitle setText:titleString];
-            }
+    
+    // UI
+    UILabel* labelTitle = nil;
+    UIImage* imagePosition = nil;
+    UIImage* imageCategoryFirst = nil;
+    UIImage* imageCategorySecond = nil;
+    UIImage* imageCategoryThird = nil;
+    
+    for (UIView* view in cell.contentView.subviews) {
+        if (view.tag == kCellTagTitle) {        // labelTitle;
+            labelTitle = (UILabel *)[view viewWithTag:kCellTagTitle];
         }
+        else if (view.tag == kCellTagSettingsPosition) {
+            imagePosition = (UIImage *)[view viewWithTag:kCellTagSettingsPosition];
+        }
+        else if (view.tag == kCellTagSettingsCategoryFirst) {
+            imageCategoryFirst = (UIImage *)[view viewWithTag:kCellTagSettingsCategoryFirst];
+        }
+        else if (view.tag == kCellTagSettingsCategorySecond) {
+            imageCategorySecond = (UIImage *)[view viewWithTag:kCellTagSettingsCategorySecond];
+        }
+        else if (view.tag == kCellTagSettingsCategoryThird) {
+            imageCategoryThird = (UIImage *)[view viewWithTag:kCellTagSettingsCategoryThird];
+        }
+        
+    }
+    
+    // Data
+    NSString* title = nil;
+    NSString* position = nil;
+    
+    if (indexPath.section == eFoodAutoCook) {
+        title = [[arrayOfAuto objectAtIndex:indexPath.row] objectForKey:@"Name"];
+        position = [NSString stringWithFormat:@"pos%ld", [[arrayOfAuto objectAtIndex:indexPath.row] objectForKey:@"Settings"
     }
     else if (indexPath.section == eFoodManualCook) {
-        for (UIView* view in cell.contentView.subviews) {
-            if (view.tag == 0) {
-                UILabel* labelTitle = (UILabel *)[view viewWithTag:0];
-                NSString* titleString = [[arrayOfManual objectAtIndex:indexPath.row] objectForKey:@"Name"];
-                [labelTitle setText:titleString];
-            }
-        }
+        title = [[arrayOfManual objectAtIndex:indexPath.row] objectForKey:@"Name"];
     }
-
+    [labelTitle setText:title];
     
     return cell;
 }

@@ -36,6 +36,50 @@
     return [foodData objectForKey:@"AutoCook"];
 }
 
+- (NSDictionary *)autoFoodDataAtIndex:(NSInteger)index {
+    return [[self arrayOfAutoFoods] objectAtIndex:index];
+}
+
+- (NSString *)nameOfAutoFoodDataAtIndex:(NSInteger)index {
+    return [[self autoFoodDataAtIndex:index] objectForKey:@"Name"];
+}
+
+- (NSArray *)howToMakeOfAutoFoodDataAtIndex:(NSInteger)index {
+    return [[self autoFoodDataAtIndex:index] objectForKey:@"HowToMake"];
+}
+
+- (NSArray *)ingredientsOfAutoFoodDataAtIndex:(NSInteger)index {
+    return [[self autoFoodDataAtIndex:index] objectForKey:@"Ingredients"];
+}
+
+- (NSDictionary *)settingsOfAutoFoodDataAtIndex:(NSInteger)index {
+    return [[self autoFoodDataAtIndex:index] objectForKey:@"Settings"];
+}
+
+- (NSNumber *)positionOfAutoFoodDataAtIndex:(NSInteger)index {
+    return [[self settingsOfAutoFoodDataAtIndex:index] objectForKey:@"Position"];
+}
+
+- (NSString *)categoryOfAutoFoodDataAtIndex:(NSInteger)index category:(NSInteger)category {
+    NSDictionary* settings = [self settingsOfAutoFoodDataAtIndex:index];
+    switch (category) {
+        case 1:
+            return [settings objectForKey:@"CategoryFirst"];
+        case 2:
+            return [settings objectForKey:@"CategorySecond"];
+        case 3:
+            return [settings objectForKey:@"CategoryThird"];
+        default:
+            return nil;
+    }
+    return nil;
+}
+
+- (NSString *)panOfAutoFoodDataAtIndex:(NSInteger)index {
+    return [[self settingsOfAutoFoodDataAtIndex:index] objectForKey:@"Pan"];
+}
+
+
 - (NSArray *)arrayOfManualFoods {
     return [foodData objectForKey:@"ManualCook"];
 }
