@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class CBFoodDataManager;
+
 @interface CBFoodListTableViewController : UITableViewController
 
-@property (retain, nonatomic) NSArray* namesOfSectionHeader;
+@property (retain, nonatomic) CBFoodDataManager* foodDataManager;
 
 @end

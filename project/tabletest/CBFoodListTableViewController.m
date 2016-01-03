@@ -7,6 +7,7 @@
 //
 
 #import "CBFoodListTableViewController.h"
+#import "CBFoodDataManager.h"
 
 @interface CBFoodListTableViewController ()
 
@@ -24,7 +25,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // names of sections
-    self.namesOfSectionHeader = @[@"자동요리", @"수동요리"];
+    _foodDataManager = [[CBFoodDataManager alloc] init];
+    [_foodDataManager load];
+    [_foodDataManager setSections:@[@"자동 설정 요리", @"수동 설정 요리"]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,23 +39,50 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return [_foodDataManager sectionsCount];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    if (section == eFoodAutoCook) {
+        return [[_foodDataManager arrayOfAutoFoods] count];
+    }
+    else if (section == eFoodManualCook) {
+        return [[_foodDataManager arrayOfManualFoods] count];
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FoodInfoCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    NSArray* arrayOfAuto = [_foodDataManager arrayOfAutoFoods];
+    NSArray* arrayOfManual = [_foodDataManager arrayOfManualFoods];
+    if (indexPath.section == eFoodAutoCook) {
+        for (UIView* view in cell.contentView.subviews) {
+            if (view.tag == 0) {
+                UILabel* labelTitle = (UILabel *)[view viewWithTag:0];
+                NSString* titleString = [[arrayOfAuto objectAtIndex:indexPath.row] objectForKey:@"Name"];
+                [labelTitle setText:titleString];
+            }
+        }
+    }
+    else if (indexPath.section == eFoodManualCook) {
+        for (UIView* view in cell.contentView.subviews) {
+            if (view.tag == 0) {
+                UILabel* labelTitle = (UILabel *)[view viewWithTag:0];
+                NSString* titleString = [[arrayOfManual objectAtIndex:indexPath.row] objectForKey:@"Name"];
+                [labelTitle setText:titleString];
+            }
+        }
+    }
+
     
     return cell;
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [self.namesOfSectionHeader objectAtIndex:section];
+    return [[_foodDataManager namesOfSectionHeader] objectAtIndex:section];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

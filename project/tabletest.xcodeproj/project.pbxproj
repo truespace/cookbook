@@ -18,6 +18,7 @@
 		67711BC61C3906E20096ECD0 /* foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67711BC51C3906E20096ECD0 /* foods.plist */; };
 		67711BC91C3907130096ECD0 /* IMG_0037.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 67711BC71C3907130096ECD0 /* IMG_0037.JPG */; };
 		67711BCA1C3907130096ECD0 /* IMG_0037@2x.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 67711BC81C3907130096ECD0 /* IMG_0037@2x.JPG */; };
+		E5C69A431C391D740014EC24 /* CBFoodDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C69A421C391D740014EC24 /* CBFoodDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		67711BC51C3906E20096ECD0 /* foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foods.plist; sourceTree = "<group>"; };
 		67711BC71C3907130096ECD0 /* IMG_0037.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0037.JPG; sourceTree = "<group>"; };
 		67711BC81C3907130096ECD0 /* IMG_0037@2x.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IMG_0037@2x.JPG"; sourceTree = "<group>"; };
+		E5C69A411C391D740014EC24 /* CBFoodDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFoodDataManager.h; sourceTree = "<group>"; };
+		E5C69A421C391D740014EC24 /* CBFoodDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFoodDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 			children = (
 				67711BC21C3904500096ECD0 /* CBFoodListTableViewController.h */,
 				67711BC31C3904500096ECD0 /* CBFoodListTableViewController.m */,
+				E5C69A411C391D740014EC24 /* CBFoodDataManager.h */,
+				E5C69A421C391D740014EC24 /* CBFoodDataManager.m */,
 			);
 			name = Contents;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C69A431C391D740014EC24 /* CBFoodDataManager.m in Sources */,
 				67711BB11C38F8DA0096ECD0 /* SecondViewController.m in Sources */,
 				67711BAB1C38F8DA0096ECD0 /* AppDelegate.m in Sources */,
 				67711BAE1C38F8DA0096ECD0 /* FirstViewController.m in Sources */,
@@ -341,6 +347,7 @@
 				67711BBF1C38F8DA0096ECD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
